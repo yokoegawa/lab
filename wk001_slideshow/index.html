@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>slide show 20140817</title>
+        <script type="text/javascript" src="js_lib/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js_lib/jquery.glide.min.js"></script>
+    </head>
+    <body>
+        <div class="slider">
+            <ul class="slides">
+                <li class="slide"><img src="img/IMG_1616.JPG" width="1280" /></li>
+                <li class="slide"><img src="img/IMG_1644.JPG" width="1280" /></li>
+                <li class="slide"><img src="img/IMG_1691.JPG" width="1280" /></li>
+                <li class="slide"><img src="img/IMG_1739.JPG" width="1280" /></li>                
+            </ul>
+        </div>
+        <script>
+            $('.slider').glide({
+                autoplay: 5000,
+                arrows: 'body',
+                nav: 'body'
+            });
+        </script>
+    </body>
+</html>
