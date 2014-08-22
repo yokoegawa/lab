@@ -2,23 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>slide show 20140817</title>
+        <title>slide show</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
         <script src="js_lib/jquery/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" type="text/css" href="js_lib/Glide.js-master/css/style.css">
         <script src="js_lib/Glide.js-master/jquery.glide.js"></script>
-        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <div class="slider">
-            <ul class="slides">
-                <li class="slide"><img src="img/IMG_1616.JPG" /></li>
-                <li class="slide"><img src="img/IMG_1644.JPG" /></li>
-                <li class="slide"><img src="img/IMG_1739.JPG" /></li>            
-            </ul>
-        </div>
-    </body>
-    <script>
-        var glide = $('.slider').glide().data('api_glide');
-        glide.play();
-    </script>
+<body>
+<div class="slider">
+    <ul class="slides">
+        <li class="slide"><img src="img/IMG_1616.JPG"/></li>
+        <li class="slide"><img src="img/IMG_1644.JPG"/></li>
+        <li class="slide"><img src="img/IMG_1739.JPG"/></li>            
+    </ul>
+</div>
+</body>
+<script>
+	$('.slider').glide({
+		autoplay: 3000,
+		hoverpause: true,
+		animationDuration: 1000,
+		navigation: true,
+		arrows: true,
+		keyboard: true,
+	});
+</script>
 </html>

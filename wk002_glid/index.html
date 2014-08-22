@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>g</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/overview.css">
+        <script src="js_lib/jquery/jquery-1.11.1.min.js"></script>
+        <script src="js_lib/Wookmark/jquery.wookmark.js"></script>
+    </head>
+<body>
+    <div id="container">
+        <div id="main" role="main">
+            <ul id="tiles">
+                <!-- These are our grid blocks -->
+                <li><img src="img/IMG_1616.JPG" width="200" height="283"></li>
+                <li><img src="img/IMG_1644.JPG" width="200" height="300"></li>
+                <li><img src="img/IMG_1739.JPG" width="200" height="252"></li>
+                <li><img src="img/IMG_1739.JPG" width="200" height="158"></li>
+                <!-- End of grid blocks -->
+            </ul>
+        </div>
+    </div>
+</body>
+  <!-- Once the page is loaded, initalize the plug-in. -->
+  <script type="text/javascript">
+    (function ($){
+      var handler = $('#tiles li');
+
+      handler.wookmark({
+          // Prepare layout options.
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('#main'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 10, // Optional, the distance to the containers border
+          itemWidth: 210 // Optional, the width of a grid item
+      });
+
+      // Capture clicks on grid items.
+      handler.click(function(){
+        // Randomize the height of the clicked item.
+        var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+        $(this).css('height', newHeight+'px');
+
+        // Update the layout.
+        handler.wookmark();
+      });
+    })(jQuery);
+  </script>
+</html>
