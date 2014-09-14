@@ -1,0 +1,11 @@
+iframe {
+    width:1000px;
+    height:1000px;
+}
+
+.trimming {
+    position:absolute;
+    clip: rect(240px 610px 520px 200px);
+    top: -240px;
+    left: -200px;
+ }
