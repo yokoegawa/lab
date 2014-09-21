@@ -42,7 +42,7 @@
     verticalOffset: undefined
   };
 
-  // Function for executing css writes to dom on the next animation frame if supported
+  // Function for executing writes to dom on the next animation frame if supported
   var executeNextFrame = window.requestAnimationFrame || function(callback) {callback();},
       $window = $(window);
 

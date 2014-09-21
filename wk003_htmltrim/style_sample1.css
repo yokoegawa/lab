@@ -1,0 +1,21 @@
+iframe {
+    width:1200px;
+    height:1200px;
+    -o-transform: scale(1.5);
+    -o-transform-origin: 0 0;
+    -ms-transform: scale(1.5);
+    -ms-transform-origin: 0 0;
+    -moz-transform: scale(1.5);
+    -moz-transform-origin: 0 0;
+    -webkit-transform: scale(1.5);
+    -webkit-transform-origin: 0 0;
+    transform: scale(1.5);
+    transform-origin: 0 0;
+}
+
+.trimming {
+    position:absolute;
+    clip: rect(128px 1612px 825px 180px);
+    top: -128px;
+    left: -180px;
+ }
